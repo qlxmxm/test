@@ -1,0 +1,9 @@
+et a = parseInt(prompt("첫번쨰 정수를 입력하세요"));
+        let b = parseInt(prompt("두번쨰 정수를 입력하세요"));
+
+        if(a==b){
+            document.write(a*b);
+        }
+        else if(a!=b){
+            document.write(a+b);
+        }
