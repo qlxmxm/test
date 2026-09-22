@@ -36,7 +36,7 @@
         "topic": "테스트213",
         "participants": "하나,둘,셋,넷",
         "is_private": false,
-        "status": "RESERVED"
+        "status": "CANCELED"
     },
     {
         "reservation_id": 4,
@@ -62,6 +62,19 @@
         "topic": "테스트1235",
         "participants": "1235",
         "is_private": false,
+        "status": "RESERVED"
+    },
+    {
+        "reservation_id": 6,
+        "user_id": "admin",
+        "room_id": 3,
+        "date": "2026-09-20",
+        "start_time": "15:00",
+        "end_time": "18:00",
+        "people_count": 4,
+        "topic": "임원진 회의",
+        "participants": "하나,둘,셋,넷",
+        "is_private": true,
         "status": "RESERVED"
     }
 ]
