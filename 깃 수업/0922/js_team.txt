@@ -1,3 +1,3 @@
 team: JS
-manager: Kim
+manager: Lee
 members: Mi
