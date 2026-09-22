@@ -1,3 +1,3 @@
 team: React
 manager: Min
-members: June
+members: Ji
