@@ -1,32 +1,39 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import HomePage from './components/newComponents/HomePage'
+import LoginPage from './components/newComponents/LoginPage'
+import SinUpPage from './components/newComponents/SinUpPage'
+import MemberListPage from './components/newComponents/MemberListPage'
+import PostListPage from './components/newComponents/PostListPage'
+import CreatePostPage from './components/newComponents/CreatePostPage'
+import EditPostPage from './components/newComponents/EditPostPage'
+import NaviBar from './components/newComponents/NaviBar'
+import AuthContextPro from './components/newComponents/AuthContextPro'
 
 const App = () => {
-
-  //1.useState초기화 (비어있게- name, email, password)
-  const [user, setUser]=useState({name:'', email:'', password:''});
-
-  const onCh1=(e)=>{
-    setUser({...user, [e.target.name]:e.target.value})
-  }
-
-  //user상태가 바뀔때마다 localstorage에 저장
-  useEffect(()=>{
-    localStorage.setItem("user",JSON.stringify(user)) //객체 -> 문자열
-  },[user])
-
-  const save=()=>{
-    alert("저장")
-  }
-
   return (
-    <div>
-        이름 <input value={user.name} onChange={onCh1} name="name" />
-        이메일 <input type="email" value={user.email} onChange={onCh1} name="email" />
-        비밀번호 <input type='password' value={user.password} onChange={onCh1} name="password" />
+  <AuthContextPro>
+    <BrowserRouter>
+      <NaviBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
 
-        <button onClick={save}>저장</button>
+          <Route path="/login" element={<LoginPage />} />
 
-    </div>
+          <Route path="/join" element={<SinUpPage />} />
+
+          <Route path="/memberList" element={<MemberListPage />} />
+
+          <Route path="/boardList" element={<PostListPage />} />
+
+          <Route path="/posts/create" element={<CreatePostPage />} />
+
+          <Route path="/posts/edit/:id" element={<EditPostPage />} />
+
+        </Routes>
+      
+    </BrowserRouter>
+  </AuthContextPro>
   )
 }
 
