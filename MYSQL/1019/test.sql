@@ -17,3 +17,10 @@ show grants for 'sjw'@'localhost';
 
  -- 사용자 삭제
  drop user 'sjw'@'localhost';
+
+
+ select * from user;
+
+ select * from student;
+
+ desc user;
