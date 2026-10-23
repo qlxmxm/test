@@ -23,4 +23,6 @@ show grants for 'sjw'@'localhost';
 
  select * from student;
 
- desc user;
+ drop table student;
+
+ use jw1;
