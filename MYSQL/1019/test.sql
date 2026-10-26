@@ -18,8 +18,9 @@ show grants for 'sjw'@'localhost';
  -- 사용자 삭제
  drop user 'sjw'@'localhost';
 
+desc course;
 
- select * from user;
+ select * from course;
 
  select * from student;
 
